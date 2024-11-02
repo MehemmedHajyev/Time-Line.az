@@ -335,15 +335,7 @@
 
 
 @media only screen and (max-width: 500px) {
-    .timeline {
-        margin: 10px 25px 90px 0px;
 
-    }
 
-    .timeline-header {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 1px !important;
-        position: relative;
-    }
+
 }
