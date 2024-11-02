@@ -631,6 +631,14 @@ header .first-img-box-container {
         line-height: 67.7px;
         color: rgba(6, 92, 169, 1);
     }
+
+    .year-container h2,
+    .year-container-second h2 {
+        text-align: center;
+        padding-top: 77px;
+        font-size: 30px;
+
+    }
 }
 
 
@@ -638,13 +646,6 @@ header .first-img-box-container {
     margin-top: 10px !important;
 }
 
-.year-container h2,
-.year-container-second h2 {
-    text-align: center;
-    padding-top: 77px;
-    font-size: 30px;
-
-}
 
 .timeline {
     margin: 198px 25px 00px 0px;
