@@ -1,0 +1,651 @@
+@import url(time.css);
+
+:root {
+    --primary-color: rgba(13, 110, 139, 0.75);
+    --overlay-color: rgba(24, 39, 51, 0.85);
+    --menu-speed: 0.75s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rethink Sans';
+    src: url('../fonts/Rethink_Sans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+main {
+    overflow-x: hidden;
+}
+
+header {
+    /* position: fixed; */
+}
+
+
+
+
+
+
+#container {
+    max-width: 1170px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.header-head-container {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.header-main {
+    z-index: 9999999999999999 !important;
+    transition: background-color 0.3s ease, padding 0.3s ease, transform 0.3s ease;
+    /* Ensure initial background color is set */
+    background-color: transparent;
+}
+
+.header-main.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 5px 0;
+    /* Adjust the padding for the sticky state */
+    background-color: white;
+    /* Change this to whatever background you want when sticky */
+    /* Reasonable z-index */
+    transform: scaleY(1.05);
+    /* Slightly scale the header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Optional shadow for visibility */
+}
+
+.header-main:not(.sticky) {
+    transform: scaleY(1);
+    /* Reset scale when not sticky */
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.logo {
+    display: block;
+    width: 161.11px;
+    height: 86px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.nav_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+}
+
+.nav_list li a {
+    font-family: Rethink Sans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.83px;
+    text-align: left;
+    color: rgba(33, 30, 31, 1);
+    cursor: pointer;
+}
+
+.nav_list li a:hover {
+    color: rgba(233, 35, 40, 1);
+
+}
+
+
+/* Temel stil */
+.dropdown {
+    position: relative;
+    width: 200px;
+}
+
+.dropdown-btn {
+    width: 35%;
+    padding: 10px;
+    cursor: pointer;
+    font-family: Rethink Sans;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 20.83px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.dropdown-btn:hover {
+    color: rgba(233, 35, 40, 1);
+}
+
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: 60%;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+}
+
+.dropdown-content div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-content div:hover {
+    background-color: #ddd;
+}
+
+/* Seçilen dilin gösterimi */
+#selectedLanguage {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+
+.main-title {
+    max-width: 967px;
+    font-family: Rethink Sans;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 67.7px;
+    text-align: center;
+    margin: 100px auto 0 auto;
+}
+
+.first-img-box {
+    max-width: 486px;
+}
+
+header .first-img-box-container {
+    /* display: flex; */
+    margin-top: 198px;
+}
+
+.first-img-box-date {
+    width: Hug (114px)px;
+    height: Hug (59px)px;
+    padding: 8px 20px 8px 20px;
+    gap: 8px;
+    border-radius: 12px 12px 0px 12px;
+    opacity: 0px;
+    background: rgba(6, 92, 169, 1);
+    display: inline-flex;
+    float: inline-end;
+    font-family: Rethink Sans;
+    font-size: 33px;
+    font-weight: 800;
+    line-height: 42.97px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 16px;
+}
+
+.first-box-desc {
+    font-family: Rethink Sans;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: left;
+    margin-top: 28px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+
+.second-box_container,
+.third-box_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+
+.year-container,
+.year-container-second {
+
+    background-image: url(../images/box-img/1878.png);
+    max-width: 1200px;
+    max-height: 222px;
+    gap: 0px;
+    opacity: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-top: 100px !important;
+}
+
+.year-container-second {
+    margin-top: 100px;
+    background-image: url(../images/box-img/1887.png);
+    margin-bottom: 200px !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+
+
+#year {
+    background-image: url(../images/box-img/1903.png);
+}
+
+#year-1930 {
+    background-image: url(../images/box-img/1930.png);
+}
+
+#year-1964 {
+    background-image: url(../images/box-img/1964.png);
+}
+
+.ex-mt {
+    margin-top: 200px;
+
+}
+
+.dropdown-content a {
+    color: #211E1F;
+}
+
+#end-after-there {
+    background-image: url(../images/box-img/1903.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#end-after-two {
+    background-image: url(../images/box-img/1930.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#end-after-one {
+    background-image: url(../images/box-img/1964.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#end {
+    background-image: url(../images/box-img/2024.png);
+    margin-top: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+
+
+.year-container h2,
+.year-container-second h2 {
+    text-align: center;
+    padding-top: 77px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Rethink Sans;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 67.7px;
+    text-align: center;
+}
+
+.year-bottom-text {
+    margin-top: 97px;
+    text-align: center;
+    font-family: Rethink Sans;
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 67.7px;
+    color: rgba(6, 92, 169, 1);
+}
+
+
+.year-beetwen-line {
+    margin: 130px auto 50px auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    padding-left: 70px;
+}
+
+.year-beetwen-line img {
+    display: flex;
+    align-items: center;
+}
+
+.first-img-box img {
+    width: 100%;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+
+/* Hamburger menu */
+.showcase {
+    background: var(--primary-color);
+    color: #fff;
+    height: 100vh;
+    position: relative;
+}
+
+.showcase:before {
+    content: '';
+    background: url('https://images.pexels.com/photos/533923/pexels-photo-533923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.showcase .showcase-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.showcase h1 {
+    font-size: 4rem;
+}
+
+.showcase p {
+    font-size: 1.3rem;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    transition: opacity 1s ease-in-out;
+    text-decoration: none;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+.menu-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+}
+
+.menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #045ca9;
+}
+
+.menu-wrap .hamburger>div {
+    position: relative;
+    flex: none;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.menu-wrap .hamburger>div::before,
+.menu-wrap .hamburger>div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+}
+
+.menu-wrap .hamburger>div::after {
+    top: 10px;
+}
+
+.menu-wrap .toggler:checked+.hamburger>div {
+    transform: rotate(135deg);
+}
+
+.menu-wrap .toggler:checked+.hamburger>div:before,
+.menu-wrap .toggler:checked+.hamburger>div:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+.menu-wrap .toggler:checked:hover+.hamburger>div {
+    transform: rotate(225deg);
+    background: #fff;
+}
+
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-wrap .menu>div {
+    background: var(--overlay-color);
+    width: 200vw;
+    height: 100%;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+
+.menu-wrap .menu>div>div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu>div>div>ul>li {
+    list-style: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.menu-wrap .menu>div>div>ul>li>a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+@media only screen and (max-width: 1200px) {
+    #container {
+        margin: 10px 10px;
+    }
+
+}
+
+
+@media screen and (max-width: 992px) {
+    .main-title {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: unset;
+    }
+
+    .first-img-box {
+        margin-top: 40px;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .year-container,
+    .year-container-second {
+        margin-top: 60px;
+    }
+
+    .year-beetwen-line {
+        padding-left: unset;
+        margin: 160px auto -60px auto;
+    }
+
+    #end {
+        margin-top: unset;
+    }
+
+    .header-head-container {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.relativee {
+    position: relative;
+}
+
+.bordered-poston {
+    border: 2px solid #D5DCE2;
+    position: absolute;
+    height: 346vh;
+    z-index: 999;
+}
+
+
+.timeline-item {
+    position: relative;
+}
+
+.timeline-overlay {
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -100 !important;
+    filter: opacity(15%) blur(2px);
+    transition: ease-in .4s;
+}
+
+
+
+
+
+.header-container {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s ease;
+    z-index: 1000;
+    /* Keeps it above other content */
+}
+
+.hide-nav {
+    top: -100px;
+    /* Adjust based on the height of your header */
+}

@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css?family=Cardo|Pathway+Gothic+One');
+
+@media only screen and (max-width: 767px) {
+    .responsive {
+        /* Responsive styles */
+    }
+}
+
+.timeline {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 1170px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 999999999 !important;
+    /* padding: 80px 0; */
+}
+
+.timeline__content {
+    padding-top: 60px;
+    position: relative;
+}
+
+.timeline__content-desc {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Rethink Sans;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    color: #35221B;
+    margin-top: 28px;
+
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background-image-path.jpg');
+    /* Arka plan resmini buraya ekle */
+    background-size: cover;
+    background-position: center;
+    filter: blur(15px);
+    /* Bulanıklık */
+    opacity: 0.5;
+    /* Opaklık */
+    z-index: -1;
+    /* Arka planda kalmasını sağlar */
+}
+
+/* 
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background-image-path.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(15px);
+    opacity: 0.5;
+    z-index: -1;
+} */
+
+
+@media only screen and (max-width: 767px) {
+    .timeline:before {
+        left: 40px;
+    }
+}
+
+/* .timeline-item {
+    padding: 40px 0;
+    opacity: 0.3;
+    filter: blur(2px);
+    transition: 0.5s;
+    box-sizing: border-box;
+    width: calc(50% - 40px);
+    display: flex;
+    position: relative;
+    transform: translateY(-80px);
+
+} */
+
+.timeline-item {
+    padding: 40px 0;
+
+    transition: 0.8s;
+    box-sizing: border-box;
+    max-width: 486px;
+    width: calc(50% - 40px);
+    display: flex;
+    position: relative;
+    transform: translateX(0px) scale(1);
+    margin-bottom: 100px;
+}
+
+
+.timeline__content-title {
+    font-weight: normal;
+    font-family: Rethink Sans;
+    font-size: 33px;
+    font-weight: 800;
+    line-height: 42.97px;
+    text-align: left;
+    color: #fff;
+    position: absolute;
+    top: -8px;
+    right: 0;
+    padding: 8px 20px 8px 20px;
+    gap: 8px;
+    border-radius: 12px 12px 0px 12px;
+    opacity: 0px;
+    background: #065CA9;
+}
+
+.timeline-item:before {
+    content: attr(data-text);
+    letter-spacing: 3px;
+    width: 100%;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+    top: 50%;
+    margin-top: -5px;
+    padding-left: 15px;
+    opacity: 0;
+    /* right: calc(-100% - 56px); */
+
+}
+
+.timeline-item:nth-child(even) {
+    align-self: flex-end;
+}
+
+.timeline-item:nth-child(even):before {
+    right: auto;
+    text-align: right;
+    left: calc(-100% - 56px);
+    padding-left: 0;
+    border-left: none;
+    border-right: 2px solid rgba(255, 255, 255, 0.5);
+    padding-right: 15px;
+}
+
+.timeline-item--active {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+}
+
+/* .timeline-item--active:before {
+    top: 50%;
+    transition: 0.3s all 0.2s;
+    opacity: 1;
+} */
+
+/* .timeline-item--active .timeline__content-title {
+    margin: -50px 0 20px 0;
+} */
+
+.timeline-item--active {
+    margin: 0px 0 20px 0;
+
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    .timeline-item {
+        align-self: baseline !important;
+        width: 100%;
+        /* padding: 0 30px 150px 80px; */
+        margin: 30px 10px 100px 10px;
+    }
+
+    .timeline-header__title {
+        font-family: Rethink Sans;
+        font-size: 22px !important;
+        font-weight: 600;
+        line-height: 37.7px !important;
+        max-width: 276px !important;
+    }
+
+    .timeline-item:before {
+        left: 10px !important;
+        padding: 0 !important;
+        top: 50px;
+        text-align: center !important;
+        width: 60px;
+        border: none !important;
+    }
+
+    .timeline-item:last-child {
+        padding-bottom: 40px;
+    }
+}
+
+
+
+
+.timeline-container {
+    width: 100%;
+    position: relative;
+    /* padding: 80px 0; */
+    transition: 0.3s ease 0s;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: 0;
+    /* overflow: hidden; */
+    z-index: -100 !important;
+
+
+
+}
+
+.timeline__img {
+    max-width: 100%;
+    position: relative;
+    border-radius: 0 10px 0 10px;
+    z-index: 6;
+}
+
+
+.timeline-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 150px;
+    position: relative;
+}
+
+.timeline-header__title {
+    font-family: Rethink Sans;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 67.7px;
+    text-align: center;
+    max-width: 1376px;
+    color: #000000;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.timeline-header__subtitle {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 16px;
+    letter-spacing: 5px;
+    margin: 10px 0 0 0;
+    font-weight: normal;
+}
+
+.demo-footer {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.demo-footer a {
+    color: #999;
+    display: inline-block;
+    font-family: Cardo;
+}
+
+#timeline-2 .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* Tüm öğeleri sağa hizalar */
+}
+
+#timeline-4 .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* Tüm öğeleri sağa hizalar */
+}
+
+
+#timeline-2 .timeline-item {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    /* İçeriği sağa hizalar */
+}
+
+#timeline-4 .timeline-item {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    /* İçeriği sağa hizalar */
+}
+
+#timeline-2 .timeline__content {
+    text-align: right;
+    /* İçerikteki metni sağa hizalar */
+}
+
+#timeline-4 .timeline__content {
+    text-align: right;
+    /* İçerikteki metni sağa hizalar */
+}
+
+@media only screen and (max-width: 1000px) {
+    .timeline:before {
+        position: absolute;
+        left: 50%;
+        width: 0px;
+        height: 100%;
+        margin-left: -1px;
+        content: "";
+        background: #D5DCE2;
+        /* border: 2px solid #D5DCE2 */
+    }
+
+    .timeline {
+        margin: 50px 10px 50px 10px;
+
+    }
+
+    .main-timeline_container {
+        max-width: 100%;
+        margin: auto;
+    }
+}
+
+
+
+@media only screen and (max-width: 500px) {
+    .timeline {
+        margin: 90px 25px 90px 0px;
+
+    }
+}
