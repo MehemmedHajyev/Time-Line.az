@@ -618,8 +618,18 @@ header .first-img-box-container {
     .year-container-second,
     .year-container-second {
         margin-top: 10px !important;
-        margin-left: 50px !important;
-        margin-right: 50px !important;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+
+    .year-bottom-text {
+        margin-top: 10px;
+        text-align: center;
+        font-family: Rethink Sans;
+        font-size: 29px;
+        font-weight: 800;
+        line-height: 67.7px;
+        color: rgba(6, 92, 169, 1);
     }
 }
 
@@ -637,7 +647,7 @@ header .first-img-box-container {
 }
 
 .timeline {
-    margin: 10px 25px 00px 0px;
+    margin: 198px 25px 00px 0px;
 
 }
 
@@ -647,7 +657,7 @@ header .first-img-box-container {
     margin-bottom: 1px !important;
     position: relative;
 }
-}
+
 
 .no-scroll {
     overflow: hidden;
