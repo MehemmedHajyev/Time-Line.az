@@ -180,7 +180,7 @@
         align-self: baseline !important;
         width: 100%;
         /* padding: 0 30px 150px 80px; */
-        margin: 30px 10px 100px 10px;
+        margin: 30px 10px 0px 10px;
     }
 
     .timeline-header__title {
