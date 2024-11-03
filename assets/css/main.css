@@ -515,10 +515,11 @@ header .first-img-box-container {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .menu-wrap .menu>div {
-    background: var(--overlay-color);
+    background: #fff;
     width: 200vw;
     height: 100%;
     display: flex;

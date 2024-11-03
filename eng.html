@@ -232,13 +232,48 @@
                     <div class="menu">
                         <div>
                             <div>
-                                <ul>
-                                    <li><a href="#">HOME PAGE</a></li>
-                                    <li><a href="#">ABOUT US</a></li>
-                                    <li><a href="#">OUR HISTORY</a></li>
-                                    <li><a href="#">MEDIA</a></li>
-                                    <li><a href="#">CONTACT US</a></li>
-                                </ul>
+                                <div class="dropdown">
+                                    <div style="display: flex; align-items: center; justify-content: center;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                                stroke="#E92328" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M12 2C9.43223 4.69615 8 8.27674 8 12C8 15.7233 9.43223 19.3038 12 22C14.5678 19.3038 16 15.7233 16 12C16 8.27674 14.5678 4.69615 12 2Z"
+                                                stroke="#E92328" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M2 12H22" stroke="#E92328" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <div class="dropdown-btn" onclick="toggleDropdown()">
+                                            En
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9"
+                                                viewBox="0 0 14 9" fill="none">
+                                                <path d="M1 0.999926L7.00005 6.99988L13 0.999878" stroke="#E92328"
+                                                    stroke-width="2.2" stroke-miterlimit="16" />
+                                            </svg>
+                                        </div>
+                                        <div class="dropdown-content">
+                                            <a href="index.html">
+                                                <div onclick="selectLanguage('Az')">
+                                                    Az
+
+
+                                                </div>
+                                            </a>
+
+                                            <a href="eng.html">
+                                                <div onclick="selectLanguage('En')">
+                                                    En
+                                                </div>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -504,7 +539,10 @@
         });
 
 
-
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.header-main');
+            navbar.classList.toggle('sticky', window.scrollY > 0);
+        })
 
     </script>
     <script src="assets/js/time.js"></script>
