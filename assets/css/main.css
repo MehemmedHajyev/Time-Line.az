@@ -70,9 +70,10 @@ header {
     left: 0;
     right: 0;
     width: 100%;
+    overflow: hidden;
     padding: 5px 0;
     /* Adjust the padding for the sticky state */
-    background-color: white;
+    background-color: #fff;
     /* Change this to whatever background you want when sticky */
     /* Reasonable z-index */
     transform: scaleY(1.05);

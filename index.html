@@ -506,6 +506,13 @@
 
 
 
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.header-main');
+            navbar.classList.toggle('sticky', window.scrollY > 0);
+        })
+
+
+
 
     </script>
     <script src="assets/js/time.js"></script>
