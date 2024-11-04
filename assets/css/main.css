@@ -58,7 +58,7 @@ header {
 }
 
 .header-main {
-    z-index: 9999999999999999 !important;
+    z-index: 500s !important;
     transition: background-color 0.3s ease, padding 0.3s ease, transform 0.3s ease;
     /* Ensure initial background color is set */
     background-color: transparent;
@@ -162,31 +162,61 @@ nav {
 
 
 
-.dropdown-content {
+.dropdown-content,
+.dropdown-content-mobile {
     display: none;
     position: absolute;
     background-color: #fff;
     width: 60%;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
     top: 100%;
     top: -15px;
-    z-index: 999999999999999 !important;
+    z-index: 100 !important;
     right: -60px;
     top: -20px;
+    margin-right: 10px;
 
 }
 
-.dropdown-content div {
+
+.dropdown-content-mobile {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: 60%;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    top: 100%;
+    top: -15px;
+    z-index: 100 !important;
+    right: -60px;
+    top: -20px;
+    margin-right: 10px;
+    top: 50px;
+    margin-right: 20px;
+    right: 0;
+
+}
+
+
+
+.mobile>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dropdown-content div,
+.dropdown-content-mobile div {
     padding: 10px;
     cursor: pointer;
 }
 
-.dropdown-content div:hover {
+.dropdown-content div:hover,
+.dropdown-content-mobile div:hover {
     background-color: #ddd;
 }
 
-/* Seçilen dilin gösterimi */
 #selectedLanguage {
     margin-top: 10px;
     font-weight: bold;
@@ -527,7 +557,8 @@ header .first-img-box-container {
     height: 100%;
     display: flex;
     flex: none;
-    align-items: center;
+    /* align-items: center; */
+    padding: 30px;
     justify-content: center;
     transform: scale(0);
     transition: all 0.4s ease;
