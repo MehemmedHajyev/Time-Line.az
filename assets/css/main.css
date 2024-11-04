@@ -74,8 +74,6 @@ header {
     padding: 5px 0;
     /* Adjust the padding for the sticky state */
     background-color: #fff;
-    /* Change this to whatever background you want when sticky */
-    /* Reasonable z-index */
     transform: scaleY(1.05);
     /* Slightly scale the header */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -172,6 +170,11 @@ nav {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     top: 100%;
+    top: -15px;
+    z-index: 999999999999999 !important;
+    right: -60px;
+    top: -20px;
+
 }
 
 .dropdown-content div {

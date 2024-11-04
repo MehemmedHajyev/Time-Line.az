@@ -62,9 +62,12 @@
 
             .animate-on-scroll {
                 opacity: 0;
-                /* Animasyon başlamadan önce görünmez */
                 transition: opacity 0.3s ease-in-out;
             }
+        }
+
+        .header-main {
+            z-index: 9999999999999999 !important;
         }
     </style>
 </head>
@@ -290,7 +293,7 @@
                     </h2>
                 </div>
                 <div class="timeline">
-                    <div class="timeline-item" data-aos="zoom-in">
+                    <div class="timeline-item animate-on-scroll">
                         <div class="timeline__content">
                             <img class="timeline__img" src="assets/images/box-img/first-box.png" alt="1594">
                             <h2 class="timeline__content-title">1594</h2>
@@ -304,7 +307,7 @@
                     </div>
 
 
-                    <div class="timeline-item" data-aos="zoom-in">
+                    <div class="timeline-item animate-on-scroll">
                         <div class="timeline__content">
                             <img class="timeline__img" src="assets/images/box-img/History_1859.png" alt="1859">
                             <h2 class="timeline__content-title">1859</h2>
@@ -312,7 +315,7 @@
                                 The first oil refinery was built in Baku. </p>
                         </div>
                     </div>
-                    <div class="timeline-item" data-aos="zoom-in">
+                    <div class="timeline-item animate-on-scroll">
                         <div class="timeline__content">
                             <img class="timeline__img" src="assets/images/box-img/History_1871 (1).png" alt="1871 ">
                             <h2 class="timeline__content-title">1871</h2>
@@ -321,7 +324,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="timeline-item" data-aos="zoom-in">
+                    <div class="timeline-item animate-on-scroll">
                         <div class="timeline__content">
                             <img class="timeline__img" src="assets/images/box-img/History_1872.png" alt="1872">
                             <h2 class="timeline__content-title">1872</h2>
@@ -331,7 +334,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="timeline-item" data-aos="zoom-in">
+                    <div class="timeline-item animate-on-scroll">
                         <div class="timeline__content">
                             <img class="timeline__img" src="assets/images/box-img/History_1878.png" alt="1878">
                             <h2 class="timeline__content-title">1878</h2>
@@ -371,7 +374,7 @@
                 </div>
                 <div id="timeline-2">
                     <div class="timeline">
-                        <div class="timeline-item brd-left" data-aos="zoom-in">
+                        <div class="timeline-item brd-left animate-on-scroll">
                             <div class="timeline__content">
                                 <img class="timeline__img" src="assets/images/box-img/History_1859.png" alt="1898">
                                 <h2 class="timeline__content-title">1898</h2>
@@ -390,7 +393,7 @@
 
 
                 <div id="container">
-                    <div class="year-container-second ex-mt" id="year">
+                    <div class="year-container-second ex-mt animate-on-scroll" id="year">
                         <h2>Oil production was</h2>
                         <p class="year-bottom-text">100 million tons</p>
                     </div>
@@ -402,7 +405,7 @@
 
                 <div id="timeline-3">
                     <div class="timeline">
-                        <div class="timeline-item brd-rig" data-aos="zoom-in">
+                        <div class="timeline-item brd-rig animate-on-scroll">
                             <div class="timeline__content">
                                 <img class="timeline__img" src="assets/images/box-img/History_1926.png" alt="1926">
                                 <h2 class="timeline__content-title">1926</h2>
@@ -419,18 +422,18 @@
 
 
                 <div id="container">
-                    <div class="year-container" id="year-1930">
+                    <div class="year-container animate-on-scroll" id="year-1930">
                         <!-- ///1878 -->
                         <h2>Oil production was</h2>
                         <p class="year-bottom-text">200 million tons</p>
                     </div>
 
 
-                    <span class="year-beetwen-line">
+                    <span class="year-beetwen-line animate-on-scroll">
                         <img src="assets/images/box-img/Line 38.png" alt="">
                     </span>
 
-                    <div class="year-container-second" id="year-1964">
+                    <div class=" animate-on-scroll year-container-second" id="year-1964">
                         <!-- ///1887 -->
                         <h2>Oil production was</h2>
                         <p class="year-bottom-text">300 million tons</p>
@@ -441,7 +444,7 @@
 
                 <div id="timeline-4">
                     <div class="timeline">
-                        <div class="timeline-item  brd-left" data-aos="zoom-in">
+                        <div class="timeline-item  brd-left animate-on-scroll">
                             <div class="timeline__content">
                                 <img class="timeline__img" src="assets/images/box-img/History_2012.png" alt="2012">
                                 <h2 class="timeline__content-title">2012</h2>
@@ -455,7 +458,7 @@
                 </div>
 
                 <div id="container">
-                    <div class="year-container-second end" id="end">
+                    <div class="animate-on-scroll year-container-second end" id="end">
                         <h2>Oil production was</h2>
                         <p class="year-bottom-text">337.5 million tons</p>
                     </div>
@@ -479,14 +482,8 @@
     </main>
     <footer></footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
-    <script>
-        AOS.init({
-            duration: 1000, // Animasyon süresi (ms cinsinden)
-            offset: 200,    // Scroll pozisyonuna göre animasyon başlangıç noktası
-        });
-    </script>
+
 
     <script>
 
