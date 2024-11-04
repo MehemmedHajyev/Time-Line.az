@@ -32,7 +32,7 @@
     line-height: 32px;
     color: #35221B;
     margin-top: 28px;
-
+    word-spacing: 2px
 }
 
 .timeline:before {
@@ -90,8 +90,15 @@
 
 } */
 
+
+.timeline {
+    /* padding: 50px 0; */
+    margin-top: 100px;
+
+}
+
 .timeline-item {
-    padding: 40px 0;
+    /* padding: 40px 0; */
 
     transition: 0.8s;
     box-sizing: border-box;
@@ -100,7 +107,7 @@
     display: flex;
     position: relative;
     transform: translateX(0px) scale(1);
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 }
 
 
@@ -299,10 +306,9 @@
     /* İçeriği sağa hizalar */
 }
 
-#timeline-2 .timeline__content {
+/* #timeline-2 .timeline__content {
     text-align: right;
-    /* İçerikteki metni sağa hizalar */
-}
+} */
 
 #timeline-4 .timeline__content {
     text-align: right;
@@ -341,4 +347,36 @@
 
         margin-top: 0px;
     }
+}
+
+
+
+/* Başlangıç durumu (gizli ve biraz yukarıda) */
+.section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Göründüğünde animasyon */
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.animate__scaleUp {
+    animation: scaleUp 0.5s ease-in-out;
 }

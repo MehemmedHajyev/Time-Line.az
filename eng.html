@@ -39,7 +39,7 @@
             left: 50%;
             top: 550px;
             transform: translateX(-50%);
-            min-height: 3000px;
+            min-height: 2100px;
             background: #D5DCE2;
         }
 
@@ -58,6 +58,12 @@
                 border: none;
                 padding-left: 0px;
 
+            }
+
+            .animate-on-scroll {
+                opacity: 0;
+                /* Animasyon başlamadan önce görünmez */
+                transition: opacity 0.3s ease-in-out;
             }
         }
     </style>

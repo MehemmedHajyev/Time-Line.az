@@ -47,5 +47,18 @@
 })();
 
 
-console.log('salam');
+document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll('.animate-on-scroll');
 
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate__animated', 'animate__zoomIn');
+        entry.target.style.opacity = 1; // Elemanı görünür yap
+        observer.unobserve(entry.target); // Sadece bir defa animasyon için gözlem durduruluyor
+      }
+    });
+  });
+
+  elements.forEach(el => observer.observe(el));
+});
