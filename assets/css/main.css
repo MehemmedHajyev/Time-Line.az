@@ -36,9 +36,6 @@ main {
     overflow-x: hidden;
 }
 
-header {
-    /* position: fixed; */
-}
 
 
 
@@ -71,12 +68,9 @@ header {
     right: 0;
     width: 100%;
     overflow: hidden;
-    padding: 5px 0;
+    /* padding: 5px 0; */
     /* Adjust the padding for the sticky state */
-    background-color: #fff;
-    transform: scaleY(1.05);
-    /* Slightly scale the header */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(180deg, #FFFCFA 56.19%, rgba(255, 252, 250, 0) 101.15%);
     /* Optional shadow for visibility */
 }
 
@@ -142,7 +136,7 @@ nav {
 }
 
 .dropdown-btn {
-    width: 35%;
+    width: 100%;
     padding: 10px;
     cursor: pointer;
     font-family: Rethink Sans;
@@ -160,8 +154,6 @@ nav {
     color: rgba(233, 35, 40, 1);
 }
 
-
-
 .dropdown-content,
 .dropdown-content-mobile {
     display: none;
@@ -176,6 +168,16 @@ nav {
     top: -20px;
     margin-right: 10px;
 
+}
+
+.dropdown-content {
+    font-family: Rethink Sans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.83px;
+    text-align: left;
+    color: rgba(33, 30, 31, 1);
+    cursor: pointer;
 }
 
 
@@ -284,7 +286,6 @@ header .first-img-box-container {
 
 .year-container,
 .year-container-second {
-
     background-image: url(../images/box-img/1878.png);
     max-width: 1200px;
     max-height: 222px;
@@ -293,7 +294,7 @@ header .first-img-box-container {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    margin-top: 20px !important;
+    margin-top: 180px !important;
 }
 
 .year-container-second {
@@ -373,7 +374,6 @@ header .first-img-box-container {
 }
 
 .year-bottom-text {
-    margin-top: 97px;
     text-align: center;
     font-family: Rethink Sans;
     font-size: 52px;
@@ -770,4 +770,23 @@ header .first-img-box-container {
     }
 
 
+}
+
+
+
+
+
+/* Başlangıç durumu: Opaklık 0, yukarıda konumlandırılmış */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease !important;
+    /* Yumuşak geçiş efekti */
+}
+
+.language-and-con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
