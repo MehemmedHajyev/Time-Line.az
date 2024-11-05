@@ -312,7 +312,7 @@
 } */
 
 #timeline-4 .timeline__content {
-    text-align: center;
+    text-align: left;
     /* İçerikteki metni sağa hizalar */
 }
 
@@ -329,7 +329,7 @@
     }
 
     .timeline {
-        margin: 50px 10px 50px 10px !important;
+        margin: 50px 10px 10px 10px !important;
 
     }
 
