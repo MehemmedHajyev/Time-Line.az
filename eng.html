@@ -17,7 +17,6 @@
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
 
-
     <style>
         #timeline-1 {
             position: relative;
@@ -42,6 +41,31 @@
             z-index: 9999999999999999 !important;
         }
     </style>
+    <style>
+        #timeline-1 {
+            position: relative;
+        }
+
+        .history-line {
+            width: 2px;
+            position: absolute;
+            left: 50%;
+            top: 450px;
+            transform: translateX(-50%);
+            min-height: 28%;
+            background: #D5DCE2;
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .header-main {
+            z-index: 9999999999999999 !important;
+        }
+    </style>
+
 </head>
 
 <body id="timeline-1" class="timeline-container">
@@ -215,30 +239,6 @@
                                             <link rel="stylesheet" href="assets/css/main.css">
 
 
-                                            <style>
-                                                #timeline-1 {
-                                                    position: relative;
-                                                }
-
-                                                .history-line {
-                                                    width: 2px;
-                                                    position: absolute;
-                                                    left: 50%;
-                                                    top: 450px;
-                                                    transform: translateX(-50%);
-                                                    min-height: 28%;
-                                                    background: #D5DCE2;
-                                                }
-
-                                                .animate-on-scroll {
-                                                    opacity: 0;
-                                                    transition: opacity 0.3s ease-in-out;
-                                                }
-
-                                                .header-main {
-                                                    z-index: 9999999999999999 !important;
-                                                }
-                                            </style>
                                         </head>
 
                                         <body id="timeline-1" class="timeline-container">
@@ -926,8 +926,8 @@
                     </div>
                 </div>
                 <div class="timeline-header">
-                    <h2 class=" timeline-header__title animate-on-scroll ">“Balakhani Operating Company LTD”
-                        <br> Şirkətinin Tarixi
+                    <h2 class=" timeline-header__title animate-on-scroll ">“Balakhani Operating Company LTD” 
+                        <br> History
                     </h2>
                 </div>
 
