@@ -52,6 +52,7 @@ main {
     display: flex;
     align-items: end;
     justify-content: space-between;
+    padding-bottom: 40px !important;
 }
 
 .header-main {
@@ -61,7 +62,8 @@ main {
     background-color: transparent;
 }
 
-.header-main.sticky {
+
+.header-main {
     position: fixed;
     top: 0;
     left: 0;
@@ -71,12 +73,27 @@ main {
     /* padding: 5px 0; */
     /* Adjust the padding for the sticky state */
     background: linear-gradient(180deg, #FFFCFA 56.19%, rgba(255, 252, 250, 0) 101.15%);
-    /* Optional shadow for visibility */
+    transition: background-color 0.5s ease, padding 0.5s ease, transform 0.5s ease-in-out;
 }
 
-.header-main:not(.sticky) {
-    transform: scaleY(1);
-    /* Reset scale when not sticky */
+.header-main.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    /* Arka plan rengi */
+    transition: transform 0.3s ease-in-out;
+    /* Yumuşak geçiş */
+    transform: translateY(0);
+    /* Başlangıçta görünür */
+}
+
+
+
+.header-main:not(.visible) {
+    transform: translateY(-100%);
+    /* Gizli durum */
 }
 
 a {
@@ -123,10 +140,6 @@ nav {
     cursor: pointer;
 }
 
-.nav_list li a:hover {
-    color: rgba(233, 35, 40, 1);
-
-}
 
 
 /* Temel stil */
@@ -137,7 +150,7 @@ nav {
 
 .dropdown-btn {
     width: 100%;
-    padding: 10px;
+    /* padding: 10px; */
     cursor: pointer;
     font-family: Rethink Sans;
     font-size: 16px;
@@ -146,8 +159,19 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 18px;
 
+
+}
+
+.dropdown-btn-mobile {
+    font-family: Rethink Sans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.83px;
+    text-align: left;
+    color: rgba(33, 30, 31, 1);
+    cursor: pointer;
 }
 
 .dropdown-btn:hover {
@@ -170,7 +194,8 @@ nav {
 
 }
 
-.dropdown-content {
+.dropdown-content,
+.dropdown-content-mobile {
     font-family: Rethink Sans;
     font-size: 16px;
     font-weight: 700;
@@ -317,6 +342,7 @@ header .first-img-box-container {
 
 #year-1964 {
     background-image: url(../images/box-img/1964.png);
+    margin-top: 250px !important;
 }
 
 .ex-mt {
@@ -463,7 +489,9 @@ header .first-img-box-container {
     top: 0;
     left: 0;
     z-index: 1;
+    width: 100%;
 }
+
 
 .menu-wrap .toggler {
     position: absolute;
@@ -511,6 +539,11 @@ header .first-img-box-container {
     width: 100%;
     height: 2px;
     background: inherit;
+}
+
+.z-negative {
+    /* background-color: red; */
+    margin-top: 200px;
 }
 
 .menu-wrap .hamburger>div::after {
@@ -586,8 +619,59 @@ header .first-img-box-container {
 }
 
 .year-container {
+    position: relative;
     margin-top: 10px !important;
 }
+
+.year-container::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    top: 101%;
+    left: 50%;
+    right: 0%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    height: 114px;
+    background: #d5dce2;
+    z-index: 20;
+}
+
+
+.line-con,
+.line-con-2 {
+    position: relative;
+}
+
+
+.line-con::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    top: -139px;
+    left: 51%;
+    right: 0;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    height: 477px;
+    background: #D5DCE2;
+    z-index: 20;
+}
+
+.line-con-2::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    top: -162px;
+    left: 51%;
+    right: 0;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    height: 366px;
+    background: #D5DCE2;
+    z-index: 20;
+}
+
 
 
 /* .timeline {
@@ -663,8 +747,53 @@ header .first-img-box-container {
         margin: 10px 10px;
     }
 
+
+
 }
 
+@media only screen and (max-width: 1100px) {
+
+    .z-negative {
+        /* background-color: red; */
+        margin-top: 0px;
+    }
+
+    .year-container,
+    .year-container-second {
+        margin-top: 0px !important;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    /* .line-con::after {
+                    background: none;
+                }
+    
+                .history-line {
+                    display: none;
+                } */
+
+    .line-con::after {
+        left: 45%;
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .line-con::after {
+        background: none !important;
+    }
+
+    .history-line {
+        display: none !important;
+    }
+
+    .line-con-2::after {
+        display: none !important;
+    }
+
+
+}
 
 @media screen and (max-width: 992px) {
     .main-title {
@@ -700,6 +829,9 @@ header .first-img-box-container {
     .mobile-menu {
         display: block;
     }
+
+
+
 }
 
 
@@ -711,7 +843,30 @@ header .first-img-box-container {
 
     }
 
+    .z-negative {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 100px;
+        margin-top: 100px;
+    }
+
+    .year-container::after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        top: 99%;
+        left: 50%;
+        right: 0%;
+        bottom: 0;
+        transform: translate(-50%, 50%);
+        height: 114px;
+        background: #d5dce2;
+        z-index: 20;
+    }
+
 }
+
+
 
 @media screen and (max-width: 500px) {
     .year-container-second {
@@ -770,10 +925,33 @@ header .first-img-box-container {
     }
 
 
+    .z-negative {
+
+        margin-top: 0px;
+    }
+
+    #year-1887 {
+        margin-top: 100px !important;
+    }
+
+
+    .year-container::after {
+
+        top: 102%;
+
+        height: 75px;
+
+    }
+
+    .z-negative {
+        margin-bottom: 10px;
+    }
+
+    #year-1964 {
+        margin-top: 150px !important;
+        margin-bottom: 100px !important;
+    }
 }
-
-
-
 
 
 /* Başlangıç durumu: Opaklık 0, yukarıda konumlandırılmış */
@@ -789,4 +967,19 @@ header .first-img-box-container {
     align-items: center;
     justify-content: center;
     gap: 8px;
+}
+
+@media screen and (max-width: 400px) {
+    .year-container::after {
+        top: 111%;
+        height: 75px;
+    }
+
+    .year-bottom-text {
+        font-size: 25px !important;
+    }
+
+    #container {
+        padding: 0 !important;
+    }
 }

@@ -23,51 +23,15 @@
             position: relative;
         }
 
-        /* .brd-left {
-            border-left: 2px solid #D5DCE2;
-            padding-left: 40px;
-        }
-
-        .brd-rig {
-            border-right: 2px solid #D5DCE2;
-            padding-right: 40px;
-        } */
-
         .history-line {
             width: 2px;
             position: absolute;
             left: 50%;
-            top: 550px;
+            top: 450px;
             transform: translateX(-50%);
-            min-height: 85.6%;
+            min-height: 28%;
             background: #D5DCE2;
         }
-
-        @media screen and (max-width: 992px) {
-            .history-line {
-                display: none;
-            }
-
-            .brd-rig {
-                border: none;
-                padding-right: 0px;
-
-            }
-
-            .brd-left {
-                border: none;
-                padding-left: 0px;
-
-            }
-
-
-            .header-main.sticky {
-                display: none;
-
-
-            }
-        }
-
 
         .animate-on-scroll {
             opacity: 0;
@@ -185,6 +149,7 @@
                                     </clipPath>
                                 </defs>
                             </svg>
+
                         </a>
                         <nav>
                             <ul class="nav_list">
@@ -212,7 +177,7 @@
                                                 stroke-linejoin="round" />
                                         </svg>
                                         <div class="dropdown-btn" onclick="toggleDropdown()">
-                                            Az
+                                            AZ
 
                                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9"
                                                 viewBox="0 0 14 9" fill="none">
@@ -223,16 +188,16 @@
                                     </div>
                                     <div class="dropdown-content">
                                         <a href="index.html">
-                                            <div onclick="selectLanguage('Az')">
-                                                Az
+                                            <div onclick="selectLanguage('AZ')">
+                                                AZ
 
 
                                             </div>
                                         </a>
 
                                         <a href="eng.html">
-                                            <div onclick="selectLanguage('En')">
-                                                En
+                                            <div onclick="selectLanguage('EN')">
+                                                EN
                                             </div>
                                         </a>
 
@@ -242,6 +207,7 @@
                         </nav>
                     </div>
                 </div>
+
 
 
 
@@ -268,7 +234,7 @@
                                             stroke-linejoin="round" />
                                     </svg>
                                     <div class="dropdown-btn-mobile" onclick=" toggleDropdownMobile()">
-                                        Az
+                                        AZ
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9"
                                             fill="none">
@@ -278,16 +244,16 @@
                                     </div>
                                     <div class="dropdown-content-mobile">
                                         <a href="index.html">
-                                            <div onclick="selectLanguage('Az')">
-                                                Az
+                                            <div onclick="selectLanguage('AZ')">
+                                                AZ
 
 
                                             </div>
                                         </a>
 
                                         <a href="eng.html">
-                                            <div onclick="selectLanguage('En')">
-                                                En
+                                            <div onclick="selectLanguage('EN')">
+                                                EN
                                             </div>
                                         </a>
 
@@ -326,7 +292,6 @@
                             <p class="timeline__content-desc">
                                 Bakıda ilk neftayırma zavodu tikilmişdir.
                             </p>
-                            <h1 class="">Scroll down to see the animation</h1>
                         </div>
                     </div>
 
@@ -365,25 +330,33 @@
                         </div>
                     </div>
 
-
-                    <div class="year-container animate-on-scroll " id="container">
-                        <!-- ///1878 -->
-                        <h2>Neft hasilatı</h2>
-                        <p class="year-bottom-text">1 milyon ton</p>
+                    <div class="z-negative">
+                        <div class="year-container animate-on-scroll " id="container">
+                            <!-- ///1878 -->
+                            <h2>Neft hasilatı</h2>
+                            <p class="year-bottom-text">1 milyon ton</p>
+                        </div>
                     </div>
+
 
 
                     <!-- <span class="year-beetwen-line animate-on-scroll " id="container">
                         <img src="assets/images/box-img/Line 38.png" alt="">
                     </span> -->
 
-                    <div class="year-container-second animate-on-scroll " id="container">
-                        <h2>Neft hasilatı</h2>
-                        <p class="year-bottom-text">10 milyon ton</p>
+                    <div class="z-negative">
+                        <div class="year-container-second animate-on-scroll" id="year-1887">
+                            <h2>Neft hasilatı</h2>
+                            <p class="year-bottom-text">10 milyon ton</p>
+                        </div>
                     </div>
+
                     <div id="timeline-2">
-                        <div class="timeline">
+                        <div class="timeline line-con">
+                            <!-- <div class="line-con"></div> -->
+
                             <div class="timeline-item brd-left animate-on-scroll">
+
                                 <div class="timeline__content">
                                     <img class="timeline__img" src="assets/images/box-img/History_1859.png" alt="1898">
                                     <h2 class="timeline__content-title">1898</h2>
@@ -402,12 +375,15 @@
                     </div>
 
 
+                    <div class="z-negative">
+                        <div id="container">
 
-                    <div id="container">
-                        <div class="year-container-second ex-mt animate-on-scroll " id="year">
-                            <h2>Neft hasilatı</h2>
-                            <p class="year-bottom-text">100 milyon ton</p>
+                            <div class="year-container-second ex-mt animate-on-scroll " id="year">
+                                <h2>Neft hasilatı</h2>
+                                <p class="year-bottom-text">100 milyon ton</p>
+                            </div>
                         </div>
+
                     </div>
 
 
@@ -415,7 +391,7 @@
 
 
                     <div id="timeline-3">
-                        <div class="timeline">
+                        <div class="timeline line-con-2">
                             <div class="timeline-item brd-rig animate-on-scroll">
                                 <div class="timeline__content">
                                     <img class="timeline__img" src="assets/images/box-img/History_1926.png" alt="1926">
@@ -434,28 +410,30 @@
 
 
 
-                    <div id="container">
-                        <div class="year-container animate-on-scroll " id="year-1930">
-                            <!-- ///1878 -->
-                            <h2>Neft hasilatı</h2>
-                            <p class="year-bottom-text">200 milyon ton</p>
+                    <div class="z-negative">
+                        <div id="container">
+                            <div class="year-container animate-on-scroll " id="year-1930">
+                                <h2>Neft hasilatı</h2>
+                                <p class="year-bottom-text">200 milyon ton</p>
+                            </div>
                         </div>
 
 
-                        <!-- <span class="year-beetwen-line animate-on-scroll">
-                            <img src="assets/images/box-img/Line 38.png" alt="">
-                        </span> -->
 
-                        <div class=" animate-on-scroll  year-container-second" id="year-1964">
-                            <h2>Neft hasilatı</h2>
-                            <p class="year-bottom-text">300 milyon ton</p>
+
+                        <div class="z-negative">
+                            <div class=" animate-on-scroll  year-container-second" id="year-1964">
+                                <h2>Neft hasilatı</h2>
+                                <p class="year-bottom-text">300 milyon ton</p>
+                            </div>
                         </div>
+
                     </div>
 
 
 
                     <div id="timeline-4">
-                        <div class="timeline">
+                        <div class="timeline line-con">
                             <div class="timeline-item  brd-left animate-on-scroll">
                                 <div class="timeline__content">
                                     <img class="timeline__img" src="assets/images/box-img/History_2012.png" alt="2012">
@@ -469,18 +447,18 @@
                             </div>
                         </div>
                     </div>
-
-                    <div id="container">
-                        <div class=" animate-on-scroll year-container-second end" id="end">
-                            <h2>Neft hasilatı</h2>
-                            <p class="year-bottom-text">337.5 milyon ton</p>
+                    <div class="z-negative">
+                        <div id="container">
+                            <div class=" animate-on-scroll year-container-second end" id="end">
+                                <h2>Neft hasilatı</h2>
+                                <p class="year-bottom-text">337.5 milyon ton</p>
+                            </div>
                         </div>
                     </div>
+
+
+
                 </div>
-
-
-
-
 
 
             </div>
@@ -566,12 +544,47 @@
 
 
 
+        // window.addEventListener('scroll', () => {
+        //     const navbar = document.querySelector('.header-main');
+        //     navbar.classList.toggle('sticky', window.scrollY > 0);
+        // })
+
+        // let lastScrollTop = 0;
+
+        // window.addEventListener('scroll', () => {
+        //     const navbar = document.querySelector('.header-main');
+        //     const currentScroll = window.scrollY;
+
+        //     if (currentScroll < lastScrollTop) {
+        //         // Scroll yukarı gidiyor
+        //         navbar.classList.add('sticky');
+        //     } else {
+        //         // Scroll aşağı gidiyor
+        //         navbar.classList.remove('sticky');
+        //     }
+
+        //     lastScrollTop = currentScroll;
+        // });
+
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.header-main');
+
+        // Sayfa yüklendiğinde navbarı sabit tut
+        navbar.classList.add('visible');
+
         window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.header-main');
-            navbar.classList.toggle('sticky', window.scrollY > 0);
-        })
+            const currentScroll = window.scrollY;
 
+            if (currentScroll > lastScrollTop) {
+                // Scroll aşağı gidiyor, navbar'ı gizle
+                navbar.classList.remove('visible');
+            } else if (currentScroll < lastScrollTop) {
+                // Scroll yukarı gidiyor, navbar'ı göster
+                navbar.classList.add('visible');
+            }
 
+            lastScrollTop = currentScroll;
+        });
 
 
     </script>
