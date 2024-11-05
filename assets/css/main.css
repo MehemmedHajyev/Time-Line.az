@@ -728,9 +728,8 @@ header .first-img-box-container {
         font-size: 29px !important;
     }
 
-    .year-beetwen-line {
-        /* margin: 40px auto 0px auto !important; */
-
+    .timeline-item:last-child {
+        padding-bottom: 0px;
     }
 
     .year-container,
@@ -762,6 +761,12 @@ header .first-img-box-container {
 
     #container {
         margin: 15px 0px 10px 0px;
+    }
+
+
+    .year-beetwen-line {
+        margin: 20px auto 10px auto !important;
+
     }
 
 
