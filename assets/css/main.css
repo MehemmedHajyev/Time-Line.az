@@ -585,99 +585,6 @@ header .first-img-box-container {
     transition: color 0.4s ease;
 }
 
-@media only screen and (max-width: 1200px) {
-    #container {
-        margin: 10px 10px;
-    }
-
-}
-
-
-@media screen and (max-width: 992px) {
-    .main-title {
-        font-size: 32px;
-        font-weight: 500;
-        line-height: unset;
-    }
-
-    .first-img-box {
-        margin-top: 40px;
-        max-width: 100%;
-        width: 100%;
-    }
-
-    .year-container,
-    .year-container-second {
-        margin-top: 60px;
-    }
-
-    .year-beetwen-line {
-        padding-left: unset;
-        margin: 160px auto -60px auto;
-    }
-
-    #end {
-        margin-top: unset;
-    }
-
-    .header-head-container {
-        display: none;
-    }
-
-    .mobile-menu {
-        display: block;
-    }
-}
-
-
-@media screen and (max-width: 500px) {
-    .year-container-second {
-        margin-top: 100px;
-        margin-bottom: 30px !important;
-    }
-
-    .year-container {
-        margin-top: 10px !important;
-    }
-
-    .year-bottom-text {
-        margin-top: 0px !important;
-        font-size: 29px !important;
-    }
-
-    .year-beetwen-line {
-        margin: 40px auto 0px auto !important;
-
-    }
-
-    .year-container,
-    .year-container-second,
-    .year-container-second {
-        margin-top: 10px !important;
-        margin-left: 10px !important;
-        margin-right: 10px !important;
-    }
-
-    .year-bottom-text {
-        margin-top: 10px;
-        text-align: center;
-        font-family: Rethink Sans;
-        font-size: 29px;
-        font-weight: 800;
-        line-height: 67.7px;
-        color: rgba(6, 92, 169, 1);
-    }
-
-    .year-container h2,
-    .year-container-second h2 {
-        text-align: center;
-        padding-top: 77px;
-        font-size: 30px;
-
-    }
-}
-
-
 .year-container {
     margin-top: 10px !important;
 }
@@ -749,4 +656,108 @@ header .first-img-box-container {
 .hide-nav {
     top: -100px;
     /* Adjust based on the height of your header */
+}
+
+@media only screen and (max-width: 1200px) {
+    #container {
+        margin: 10px 10px;
+    }
+
+}
+
+
+@media screen and (max-width: 992px) {
+    .main-title {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: unset;
+    }
+
+    .first-img-box {
+        margin-top: 40px;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .year-container,
+    .year-container-second {
+        margin-top: 60px;
+    }
+
+    .year-beetwen-line {
+        padding-left: unset;
+        margin: 160px auto -60px auto;
+    }
+
+    #end {
+        margin-top: unset;
+    }
+
+    .header-head-container {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .timeline-overlay {
+        position: absolute;
+        width: 0;
+        height: 0;
+
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .year-container-second {
+        margin-top: 100px;
+        margin-bottom: 30px !important;
+    }
+
+    .year-container {
+        margin-top: 10px !important;
+    }
+
+    .year-bottom-text {
+        margin-top: 0px !important;
+        font-size: 29px !important;
+    }
+
+    .year-beetwen-line {
+        margin: 40px auto 0px auto !important;
+
+    }
+
+    .year-container,
+    .year-container-second,
+    .year-container-second {
+        margin-top: 10px !important;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+
+    .year-bottom-text {
+        margin-top: 10px;
+        text-align: center;
+        font-family: Rethink Sans;
+        font-size: 29px;
+        font-weight: 800;
+        line-height: 67.7px;
+        color: rgba(6, 92, 169, 1);
+    }
+
+    .year-container h2,
+    .year-container-second h2 {
+        text-align: center;
+        padding-top: 77px;
+        font-size: 30px;
+
+    }
+
+
 }
